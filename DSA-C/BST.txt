@@ -1,0 +1,26 @@
+Algorithm for Search in Binary Tree
+
+---------------------------------
+Algorithm |Search Operation|
+---------------------------------
+
+if root == NULL
+   return NULL;
+else if number == root->data
+   return root->data
+else if number < root->data
+   return search(root->left)
+else number > root-> data
+   return search(root->right)
+
+---------------------------------
+ALgorithm |Insert Operation|
+---------------------------------
+
+if root == NULL
+   return NULL;
+else if(data < node-> data)
+   node->left = insert(node->left, data)
+else if(data > node->data)
+   node->right = insert(node->right, data)
+return node;

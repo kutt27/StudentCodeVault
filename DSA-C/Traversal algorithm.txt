@@ -1,0 +1,25 @@
+Traversal
+
+---------
+Inorder
+---------
+
+inorder(root->left) |Visit all the nodes in the left subtree|
+display(root->data) |Then the root node|
+inorder(root->right)|Visit all the nodes in the right subtree|
+
+---------
+Preorder 
+---------
+
+display(root->data)  |Visit root node|
+preorder(root->left) |Visit all the nodes in the left subtree|
+preorder(root->right)|Visit all the nodes in the right subtree|
+
+---------
+Postorder
+---------
+
+postorder(root->left) |Visit all the nodes in the left subtree|
+postorder(root->right)|Visit all the nodes in the right subtree|
+display(root->data)   |Visit the root node|
