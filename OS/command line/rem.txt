@@ -1,64 +1,66 @@
-CHMOD(1)                         User Commands                        CHMOD(1)
+//To print the current folder path
+--> pwd
 
-NAME
-       chmod - change file mode bits
+//to get more options of a command
+--> man command
+eg: man pwd, man mv, man mkdir
 
-SYNOPSIS
-       chmod [OPTION]... MODE[,MODE]... FILE...
-       chmod [OPTION]... OCTAL-MODE FILE...
-       chmod [OPTION]... --reference=RFILE FILE...
+//To make a directory
+--> mkdir <directoryname>
+//to make two directory ay once 
+--> mkdir <directoryname> <directoryname>
+//to remove a directory 
+--> rmdir <directoryname>
+    rm -rf <directoryname>
 
-OPTIONS
-       Change  the  mode  of  each FILE to MODE.  With --reference, change the
-       mode of each FILE to that of RFILE.
+//to make an empty file 
+--> touch <filename.extension>
 
-       -c, --changes
-              like verbose but report only when a change is made
+//to open a file 
+--> xdg-open <filename>
 
-       -f, --silent, --quiet
-              suppress most error messages
+//how to move and rename file
+--> mv <filename> <new filename>
+    mv <filename> /dir name
+    mv <directory>/ renamed-dir
 
-       -v, --verbose
-              output a diagnostic for every file processed
+//to copy a file
+--> cp <filename> <copying file>
 
-       --no-preserve-root
-              do not treat '/' specially (the default)
+//to print the first few lines of the data of a file
+--> head <filename>
 
-       --preserve-root
-              fail to operate recursively on '/'
+//to print the last few lines of the data of a file
+--> tail <filename>
 
-       --reference=RFILE
-              use RFILE's mode instead of MODE values
+//time adder to the file
+amal@ubuntu:~/Desktop/test$ date >time.txt
+amal@ubuntu:~/Desktop/test$ ls
+time.txt
+amal@ubuntu:~/Desktop/test$ head time.txt
+Sun 12 Dec 2021 08:14:02 AM PST
 
-       -R, --recursive
-              change files and directories recursively
+//to print the file or concatenate
+--> cat <filename>
+    cat <filename> <filename>
+    cat -n <filename> //will show the the data in number list
+    less <filename>
+    echo <filename> //not useful, try once :)
+    echo "Something" > <filename> //it appends
 
-       --help display this help and exit
+//wc command gives us useful information about a file or input it
+receives via pipes
+--> wc -l <filename>
+    ls -l | wc //gives the number of files in the folder, for more information we can use man wc
 
-       --version
-              output version information and exit
+//to sort elements in a file
+--> sort <filename>
 
-       Each          MODE          is          of           the           form
-       '[ugoa]*([-+=]([rwxXst]*|[ugo]))+|[-+=][0-7]+'.
+//uniq report or omit repeated lines
+--> uniq <filename>
 
-AUTHOR
-       Written by David MacKenzie and Jim Meyering.
+//compare files line by line
+--> diff <filename> <filename>
 
-REPORTING BUGS
-       GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
-       Report chmod translation bugs to <https://translationproject.org/team/>
-
-COPYRIGHT
-       Copyright  ©  2018  Free Software Foundation, Inc.  License GPLv3+: GNU
-       GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
-       This is free software: you are free  to  change  and  redistribute  it.
-       There is NO WARRANTY, to the extent permitted by law.
-
-SEE ALSO
-       chmod(2)
-
-       Full documentation at: <https://www.gnu.org/software/coreutils/chmod>
-       or available locally via: info '(coreutils) chmod invocation'
-
-GNU coreutils 8.30              September 2019                        CHMOD(1)
-
+//search for files in a directory hierarchy
+--> find <keyword>
